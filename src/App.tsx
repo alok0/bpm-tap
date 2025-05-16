@@ -65,22 +65,31 @@ export const App = () => {
 
   return (
     <div
-      style={{
-        position: "absolute",
-        inset: 0,
-        backgroundColor: "#000",
-        color: "#fff",
-        fontFamily: "system-ui",
-        fontSize: "32px",
-      }}
+      className="absolute inset-0 bg-base-200 text-base-content p-8"
       onPointerDown={tap}
     >
       {!!bpm && (
         <>
-          <p>{bpm.toFixed(1)}</p>
-          <p>{(bpm / 2).toFixed(1)}</p>
-          <p>{(bpm * 2).toFixed(1)}</p>
-          <p>{bpmToDuration(bpm).toFixed(1) + "ms"}</p>
+          <div className="stats stats-vertical md:stats-horizontal bg-base-100 shadow select-none">
+            <div className="stat">
+              <div className="stat-title">BPM</div>
+              <div className="stat-value text-neutral-content">
+                {bpm.toFixed(1)}
+              </div>
+              <div className="stat-desc">
+                {bpmToDuration(bpm).toFixed(1) + "ms"}
+              </div>
+            </div>
+            <div className="stat">
+              <div className="stat-title">BPM / 2</div>
+              <div className="stat-value text-neutral-content">
+                {(bpm / 2).toFixed(1)}
+              </div>
+              <div className="stat-desc">
+                {bpmToDuration(bpm / 2).toFixed(1) + "ms"}
+              </div>
+            </div>
+          </div>
         </>
       )}
     </div>
