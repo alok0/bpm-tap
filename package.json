@@ -4,6 +4,10 @@
   "license": "All Rights Reserved",
   "private": true,
   "packageManager": "yarn@4.9.1",
+  "engines": {
+    "node": "^22"
+  },
+  "engineStrict": true,
   "scripts": {
     "prepare": "husky",
     "build": "vite build",
