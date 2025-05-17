@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import tailwindcssPlugin from "@tailwindcss/vite";
+import prefreshPlugin from "@prefresh/vite";
 
 const dirname = new URL(".", import.meta.url).pathname;
 
@@ -46,6 +47,6 @@ export default defineConfig(() => {
         "Cross-Origin-Embedder-Policy": "credentialless",
       },
     },
-    plugins: [tailwindcssPlugin()],
+    plugins: [tailwindcssPlugin(), prefreshPlugin()],
   });
 });

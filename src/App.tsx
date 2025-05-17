@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { BpmDisplay } from "./BpmDisplay";
+import { Welcome } from "./Welcome";
 
 const durationToBpm = (ms: number) => 60_000.0 / ms;
-
-const bpmToDuration = (bpm: number) => 60_000.0 / bpm;
 
 const averageFn1 = (samples: number[]): number => {
   const weighted = [
@@ -32,22 +32,19 @@ const calcBPM = (samples: number[]): number | null => {
 
 export const App = () => {
   const [samples, setSamples] = useState([] as number[]);
-  const [, setPrev] = useState(0);
+  const [prev, setPrev] = useState(0);
   const bpm = useMemo(() => calcBPM(samples), [samples]);
   const tap = useCallback(() => {
     const t = window.performance.timeOrigin + window.performance.now();
     setTimeout(() => {
       setPrev((prev) => {
-        if (!prev) {
-          return t;
-        }
         const delta = t - prev;
-        if (delta < 166) {
+        if (delta < 110) {
           return prev;
         }
         if (delta > 2000) {
           setSamples([]);
-          return 0;
+          return t;
         }
 
         setSamples((v) => [...v, delta].slice(-128));
@@ -57,9 +54,14 @@ export const App = () => {
   }, []);
 
   useEffect(() => {
-    document.body.addEventListener("keydown", tap);
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === " " || e.key === "Enter" || e.key === "Escape") {
+        tap();
+      }
+    };
+    document.body.addEventListener("keydown", handler);
     return () => {
-      document.body.removeEventListener("keydown", tap);
+      document.body.removeEventListener("keydown", handler);
     };
   }, [tap]);
 
@@ -68,30 +70,7 @@ export const App = () => {
       className="absolute inset-0 bg-base-200 text-base-content p-8"
       onPointerDown={tap}
     >
-      {!!bpm && (
-        <>
-          <div className="stats stats-vertical md:stats-horizontal bg-base-100 shadow select-none">
-            <div className="stat">
-              <div className="stat-title">BPM</div>
-              <div className="stat-value text-neutral-content">
-                {bpm.toFixed(1)}
-              </div>
-              <div className="stat-desc">
-                {bpmToDuration(bpm).toFixed(1) + "ms"}
-              </div>
-            </div>
-            <div className="stat">
-              <div className="stat-title">BPM / 2</div>
-              <div className="stat-value text-neutral-content">
-                {(bpm / 2).toFixed(1)}
-              </div>
-              <div className="stat-desc">
-                {bpmToDuration(bpm / 2).toFixed(1) + "ms"}
-              </div>
-            </div>
-          </div>
-        </>
-      )}
+      {!prev ? <Welcome /> : <BpmDisplay bpm={bpm} />}
     </div>
   );
 };
