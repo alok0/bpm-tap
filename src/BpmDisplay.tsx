@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const bpmToDuration = (bpm: number) => 60_000.0 / bpm;
 
