@@ -751,42 +751,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prefresh/babel-plugin@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@prefresh/babel-plugin@npm:0.5.1"
-  checksum: 10c0/f9153c210427adbddb4403502f8fa845f6207516de2d162f5d550683a87173dc3eaabc6be2bb4f1206b882cdd23339f2092567be8d09794a3d06a5626942b1e4
+"@prefresh/babel-plugin@npm:0.5.2":
+  version: 0.5.2
+  resolution: "@prefresh/babel-plugin@npm:0.5.2"
+  checksum: 10c0/e0a5f6a0a659021bb2ee3e6e2e281d07817511c6051293eaa1643e56c2591e1c94385a44ae6965abacdb364e01b78fca3cbdaee2756efaaa5a20d59eff2d0acf
   languageName: node
   linkType: hard
 
-"@prefresh/core@npm:^1.5.1":
-  version: 1.5.3
-  resolution: "@prefresh/core@npm:1.5.3"
+"@prefresh/core@npm:^1.5.4":
+  version: 1.5.4
+  resolution: "@prefresh/core@npm:1.5.4"
   peerDependencies:
     preact: ^10.0.0
-  checksum: 10c0/402e2d39fecdea6963326c952513c21aaaed215c6066e55708bca725025638911068bac09d6a6d9a044f6093827d6cf23b063651806ddc9d4aa977015f5c713e
+  checksum: 10c0/35822eb6977a37c2f2ce9e665653d010c7294d97d81a180a31f3a78e7bf7844eb4a343d7ef9861510cb954ffafe4b28b8f5405d4606e3998eb8fba84fc372143
   languageName: node
   linkType: hard
 
-"@prefresh/utils@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@prefresh/utils@npm:1.2.0"
-  checksum: 10c0/38cdc6cbb5e18df36996161214eb1097db3361cb0b6402a8012cbe500ba8fb5bcbdc39a687d3b6d67e99f6c340ed77d59f27ab167dfc1655eb4d783740d87d52
+"@prefresh/utils@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@prefresh/utils@npm:1.2.1"
+  checksum: 10c0/d36bcc8995128ee9028e2c48cb7812c7736a0c8e228ded586de4595f587b239ec9daac2c82221a476ffd341412dbb62082d09f7191d3ee7f5d0b8a99a45f01a8
   languageName: node
   linkType: hard
 
-"@prefresh/vite@npm:2.4.7":
-  version: 2.4.7
-  resolution: "@prefresh/vite@npm:2.4.7"
+"@prefresh/vite@npm:2.4.8":
+  version: 2.4.8
+  resolution: "@prefresh/vite@npm:2.4.8"
   dependencies:
     "@babel/core": "npm:^7.22.1"
-    "@prefresh/babel-plugin": "npm:0.5.1"
-    "@prefresh/core": "npm:^1.5.1"
-    "@prefresh/utils": "npm:^1.2.0"
+    "@prefresh/babel-plugin": "npm:0.5.2"
+    "@prefresh/core": "npm:^1.5.4"
+    "@prefresh/utils": "npm:^1.2.1"
     "@rollup/pluginutils": "npm:^4.2.1"
   peerDependencies:
     preact: ^10.4.0
     vite: ">=2.0.0"
-  checksum: 10c0/50ff4dae837ca1484d7cdeac692a1656d7e3bf5eac61ffd872a06af61108466aae45a636245d1fd6374f087c1d53cc9b60d92a8d5f250d71c6d9d009a153e157
+  checksum: 10c0/35791b8a44fd9084aea0da842fbf3cb59b4b65f95d13c742dbbffc3611b1ac5f36c52bd69ee6bf05493f712729715b63a9824d2ed756ba559aa19a14204c82af
   languageName: node
   linkType: hard
 
@@ -1162,12 +1162,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.15.33":
-  version: 22.15.33
-  resolution: "@types/node@npm:22.15.33"
+"@types/node@npm:22.15.34":
+  version: 22.15.34
+  resolution: "@types/node@npm:22.15.34"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/ee040c29c891aa37fffc27d04a8529318c391356346933646b7692eaf62236831ad532f6ebaf43ebd6a2ef1f0f091860d8a0a83a4e3c5a4f66d37aa1b2c99f31
+  checksum: 10c0/fb6a6b36daaa1b484aaba3d33b4d1e7b37ea993e29f20b7a676affa76ed6ff6acd2ded4d5003469bc8dbc815b3d224533b4560896037ef6d5b5d552721ab7d57
   languageName: node
   linkType: hard
 
@@ -1560,12 +1560,12 @@ __metadata:
   dependencies:
     "@eslint-react/eslint-plugin": "npm:1.52.2"
     "@eslint/js": "npm:9.30.0"
-    "@prefresh/vite": "npm:2.4.7"
+    "@prefresh/vite": "npm:2.4.8"
     "@tailwindcss/vite": "npm:4.1.11"
     "@tsconfig/strictest": "npm:2.0.5"
     "@tsconfig/vite-react": "npm:6.3.6"
     "@types/eslint-plugin-jsx-a11y": "npm:6.10.0"
-    "@types/node": "npm:22.15.33"
+    "@types/node": "npm:22.15.34"
     "@types/react": "npm:19.1.8"
     daisyui: "npm:5.0.43"
     eslint: "npm:9.30.0"
