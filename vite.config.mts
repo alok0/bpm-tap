@@ -11,10 +11,8 @@ export default defineConfig(() => {
     base: "./",
     publicDir: false,
     clearScreen: false,
-    esbuild: {
-      legalComments: "none",
-      jsx: "automatic",
-      jsxImportSource: "preact",
+    oxc: {
+      jsx: { importSource: "preact" },
     },
     build: {
       outDir: resolve(dirname, "dist"),
@@ -23,9 +21,14 @@ export default defineConfig(() => {
       assetsInlineLimit: 0,
       reportCompressedSize: false,
       chunkSizeWarningLimit: 1024 * 1024,
-      modulePreload: { polyfill: false },
-      rollupOptions: {
+      modulePreload: false,
+      rolldownOptions: {
         output: {
+          comments: {
+            annotation: true,
+            jsdoc: true,
+            legal: false,
+          },
           entryFileNames: "[hash].js",
           assetFileNames: "[hash][extname]",
           chunkFileNames: "[hash].js",
