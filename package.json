@@ -20,7 +20,7 @@
     "tailwindcss": "4.2.1"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "2.13.0",
+    "@eslint-react/eslint-plugin": "3.0.0",
     "@eslint/js": "10.0.1",
     "@prefresh/vite": "2.4.12",
     "@tailwindcss/vite": "4.2.1",
