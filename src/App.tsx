@@ -67,7 +67,8 @@ export const App = () => {
 
   return (
     <div
-      className="absolute inset-0 bg-base-200 text-base-content p-8"
+      data-bs-theme="dark"
+      style={{ position: "absolute", padding: "2rem", inset: 0 }}
       onPointerDown={tap}
     >
       {!prev ? <Welcome /> : <BpmDisplay bpm={bpm} />}

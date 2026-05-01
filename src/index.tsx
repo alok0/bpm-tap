@@ -1,7 +1,7 @@
 import React from "react";
 import { App } from "./App";
 import { render } from "preact";
-import "./index.css";
+import "./index.scss";
 
 render(
   <React.StrictMode>

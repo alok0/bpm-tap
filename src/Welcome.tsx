@@ -1,11 +1,9 @@
 export const Welcome = () => {
   return (
-    <div className="hero min-h-full">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">bpm tap</h1>
-          <p className="my-6">Start tapping...</p>
-        </div>
+    <div style={{ minHeight: "100%", padding: "2rem", opacity: 0.5 }}>
+      <div style={{ textAlign: "center" }}>
+        <h1>bpm tap</h1>
+        <p style={{ margin: "2rem 0" }}>Start tapping...</p>
       </div>
     </div>
   );
