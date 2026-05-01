@@ -8,8 +8,18 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "node",
+      "matchPackageNames": ["node", "@types/node", "actions/node-versions"]
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "groupName": "deps",
-      "matchPackageNames": ["!/^typescript$/"]
+      "matchPackageNames": [
+        "!/^typescript$/",
+        "!/^node$/",
+        "!/^@types\\/node$/",
+        "!/^actions\\/node-versions$/"
+      ]
     }
   ]
 }
