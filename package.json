@@ -21,7 +21,7 @@
   "devDependencies": {
     "@eslint-react/eslint-plugin": "5.7.8",
     "@eslint/js": "10.0.1",
-    "@prefresh/vite": "2.4.12",
+    "@prefresh/vite": "3.0.1",
     "@tsconfig/strictest": "2.0.8",
     "@tsconfig/vite-react": "8.0.6",
     "@types/bootstrap": "5.2.10",
