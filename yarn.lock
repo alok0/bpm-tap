@@ -550,7 +550,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.4.14, @jridgewell/sourcemap-codec@npm:^1.5.0":
+"@jridgewell/sourcemap-codec@npm:^1.4.14, @jridgewell/sourcemap-codec@npm:^1.5.0, @jridgewell/sourcemap-codec@npm:^1.5.5":
   version: 1.5.5
   resolution: "@jridgewell/sourcemap-codec@npm:1.5.5"
   checksum: 10c0/f9e538f302b63c0ebc06eecb1dd9918dd4289ed36147a0ddce35d6ea4d7ebbda243cda7b2213b6a5e1d8087a298d5cf630fb2bd39329cdecb82017023f6081a0
@@ -782,6 +782,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prefresh/rolldown@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@prefresh/rolldown@npm:0.1.0"
+  dependencies:
+    oxc-unshadowed-visitor: "npm:^0.0.1"
+    rolldown-string: "npm:^0.3.0"
+  peerDependencies:
+    rolldown: ^1.0.0-rc.12
+    vite: ^8.0.0
+  peerDependenciesMeta:
+    vite:
+      optional: true
+  checksum: 10c0/f32174bb18fcec61ef1d34da0b24bad8a9099be4e66b3506da561c512dd85ca16b892d1e8157afbd31711fd57e6877def73c3032e0d17c289a16cbe6bbd92fe8
+  languageName: node
+  linkType: hard
+
 "@prefresh/utils@npm:^1.2.0":
   version: 1.2.1
   resolution: "@prefresh/utils@npm:1.2.1"
@@ -789,19 +805,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prefresh/vite@npm:2.4.12":
-  version: 2.4.12
-  resolution: "@prefresh/vite@npm:2.4.12"
+"@prefresh/vite@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@prefresh/vite@npm:3.0.1"
   dependencies:
     "@babel/core": "npm:^7.22.1"
     "@prefresh/babel-plugin": "npm:^0.5.2"
     "@prefresh/core": "npm:^1.5.0"
+    "@prefresh/rolldown": "npm:0.1.0"
     "@prefresh/utils": "npm:^1.2.0"
     "@rollup/pluginutils": "npm:^4.2.1"
+    rolldown: "npm:^1.0.0-rc.12"
   peerDependencies:
     preact: ^10.4.0 || ^11.0.0-0
     vite: ">=2.0.0"
-  checksum: 10c0/b3e9957a6821831c294457fd0b5063fa83828fc9837b01472a377c858d3335a3c88920e99ce77381de3a63f8394459423d812e973d9afd32950b4e0db66970df
+  checksum: 10c0/a9898e72f51a5e0ba1c199611bade589bf16d8d0cb0560ba08542ded2843aae632ab9f467dcae8cccdfa210a82a338470c926997533743dc6144ec6457bf2e4f
   languageName: node
   linkType: hard
 
@@ -1417,7 +1435,7 @@ __metadata:
   dependencies:
     "@eslint-react/eslint-plugin": "npm:5.7.8"
     "@eslint/js": "npm:10.0.1"
-    "@prefresh/vite": "npm:2.4.12"
+    "@prefresh/vite": "npm:3.0.1"
     "@tsconfig/strictest": "npm:2.0.8"
     "@tsconfig/vite-react": "npm:8.0.6"
     "@types/bootstrap": "npm:5.2.10"
@@ -3357,6 +3375,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"magic-string@npm:^0.30.21":
+  version: 0.30.21
+  resolution: "magic-string@npm:0.30.21"
+  dependencies:
+    "@jridgewell/sourcemap-codec": "npm:^1.5.5"
+  checksum: 10c0/299378e38f9a270069fc62358522ddfb44e94244baa0d6a8980ab2a9b2490a1d03b236b447eee309e17eb3bddfa482c61259d47960eb018a904f0ded52780c4a
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^15.0.0":
   version: 15.0.5
   resolution: "make-fetch-happen@npm:15.0.5"
@@ -3679,6 +3706,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"oxc-unshadowed-visitor@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "oxc-unshadowed-visitor@npm:0.0.1"
+  peerDependencies:
+    oxc-parser: ^0.121.0
+    rolldown: ^1.0.0-rc.12
+  peerDependenciesMeta:
+    oxc-parser:
+      optional: true
+    rolldown:
+      optional: true
+  checksum: 10c0/a49097a2d64eaebe8ee09edcd009bf029a72d2286dfbe5e0a4aaeeb5bd7dcac289ba27384ed1831fa7931b7b515648dac788249a18fa1d16f291894a76ac1f1a
+  languageName: node
+  linkType: hard
+
 "p-limit@npm:^3.0.2":
   version: 3.1.0
   resolution: "p-limit@npm:3.1.0"
@@ -3931,7 +3973,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rolldown@npm:1.0.1":
+"rolldown-string@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "rolldown-string@npm:0.3.0"
+  dependencies:
+    magic-string: "npm:^0.30.21"
+  peerDependencies:
+    rolldown: "*"
+  peerDependenciesMeta:
+    rolldown:
+      optional: true
+  checksum: 10c0/49edc60739a6bf29ff484c328540379e9ad59fed7da8c1f491084392c3f4334e68191c00e187b2029ba537ce1e58ecf1452ade7d8a21a38a60ba9d17f2d8db51
+  languageName: node
+  linkType: hard
+
+"rolldown@npm:1.0.1, rolldown@npm:^1.0.0-rc.12":
   version: 1.0.1
   resolution: "rolldown@npm:1.0.1"
   dependencies:
