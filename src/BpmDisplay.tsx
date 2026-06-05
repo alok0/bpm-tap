@@ -28,19 +28,17 @@ const SingleStat = ({ title, bpm }: { title: ReactNode; bpm: number }) => {
 export const BpmDisplay = ({ bpm }: { bpm: number | null }) => {
   const value = !bpm || !Number.isFinite(bpm) ? 0 : bpm;
   return (
-    <>
-      <div
-        style={{
-          userSelect: "none",
-          display: "grid",
-          gridTemplateColumns: "1fr",
-          gap: ".5rem",
-          justifyItems: "start",
-        }}
-      >
-        <SingleStat title="BPM" bpm={value} />
-        <SingleStat title="BPM / 2" bpm={value / 2} />
-      </div>
-    </>
+    <div
+      style={{
+        userSelect: "none",
+        display: "grid",
+        gridTemplateColumns: "1fr",
+        gap: ".5rem",
+        justifyItems: "start",
+      }}
+    >
+      <SingleStat title="BPM" bpm={value} />
+      <SingleStat title="BPM / 2" bpm={value / 2} />
+    </div>
   );
 };
