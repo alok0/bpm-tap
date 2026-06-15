@@ -19,7 +19,7 @@
     "preact": "10.29.2"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "5.8.16",
+    "@eslint-react/eslint-plugin": "5.8.19",
     "@eslint/js": "10.0.1",
     "@prefresh/vite": "2.4.12",
     "@tsconfig/strictest": "2.0.8",
