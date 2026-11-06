@@ -1390,7 +1390,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:7.1.1"
     husky: "npm:9.1.7"
     lint-staged: "npm:17.6.0"
-    preact: "npm:10.29.8"
+    preact: "npm:11.1.1"
     prettier: "npm:3.9.10"
     sass-embedded: "npm:1.107.1"
     typescript: "npm:6.0.3"
@@ -3592,15 +3592,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:10.29.8":
-  version: 10.29.8
-  resolution: "preact@npm:10.29.8"
+"preact@npm:11.1.1":
+  version: 11.1.1
+  resolution: "preact@npm:11.1.1"
   peerDependencies:
-    preact-render-to-string: ">=5"
+    preact-render-to-string: ">=6.7.0"
   peerDependenciesMeta:
     preact-render-to-string:
       optional: true
-  checksum: 10c0/505460352139e0ce5b9c971b69d8d9f3b73ea0f316e3ff1c0b3db9a1abe206c9dff6ba385eb796253c38fcc08b5ade70cd8da3d9d6c9e9aec1a2fd59348253ae
+  checksum: 10c0/405e3b51cd29e916934583b557de1880f3102f70c90c23cb68ceba0ecf6710d69bea525faabb82f21e3a28a8883c31f0ccf8ebaf5965ca05cb047b0e275c9782
   languageName: node
   linkType: hard
 
